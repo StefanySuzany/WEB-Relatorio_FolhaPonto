@@ -33,8 +33,8 @@
         .header {
             display: flex;
             justify-content: space-between;
-            justify-items: center;
-            align-items: center;
+            justify-items: left;
+            /* align-items: center; */
             max-height: 22%;
             margin-bottom: 2%;
             padding: 1%;
@@ -42,26 +42,38 @@
             border-radius: 5px;
         }
 
-        .imagem {
+        .container-img-header {
             display: flex;
-            justify-content: left;
-            align-items: left;
-            margin-right: 2%;
         }
 
         .logo {
-            max-width: 20%;
-            max-height: 20%;
-            margin: 1%;
+            width: 100px;
+            height: 100px;
         }
 
-        .header h1 {
-            margin-left: -45%;
-            font-size: 16px;
+        .image {
+            width: 20%;
         }
 
-        .info {
-            text-align: right;
+        .emp-info {
+            display: inline-block;
+            justify-content: left;
+            align-items: left;
+            text-align: left;
+            margin-left: 5%;
+            width: 70%;
+        }
+
+        .emissao-periodo {
+            max-width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .emissao-info {
+            align-items: right;
+            text-align: left;
+            max-width: 40%;
         }
 
         .table {
@@ -76,7 +88,13 @@
             border-collapse: collapse;
             border: 1px solid #ccc;
             padding: 4px;
-            text-align: left;
+            text-align: center;
+        }
+
+        .table-alt {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
 
         .table th {
@@ -87,17 +105,17 @@
             padding: 0.5%;
         }
 
-        .table-alt {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+        .table-obs {
+            width: 20%;
+            text-align: left !important;
         }
+
 
         .table-alt th,
         .table-alt td {
             border: 1px solid #ccc;
             padding: 4px;
-            text-align: left;
+            text-align: center;
         }
 
         .table-alt th {
@@ -128,10 +146,23 @@
 <body>
     <div class="wrapper">
         <div class="header">
-            <div class="imagem">
-                <img src="/src/Logo.png" alt="Logo da empresa" class="logo">
+            <div class="container-img-header">
+                <div class="imagem">
+                    <img src="/src/Logo.png" alt="Logo da empresa" class="logo">
+                </div>
+
+                <div class="emp-info">
+                    <p style="font-weight: bold;">FORMATTI COMERCIO DE ELETRONICOS LTDA</p>
+                    <p>Endereço: RUA DO BOM CONSELHO- CHESF PAULO AFONSO\BA CNPJ: 09.781.789/0001-00</p>
+                    <div class="emissao-periodo">
+                        <p style="font-weight: bold;">Inicial: </p>
+                        <p> 01/06/2023 </p>
+                        <p style="font-weight: bold;">Final: </p>
+                        <p> 30/06/2023 </p>
+                    </div>
+                </div>
             </div>
-            <div class="info">
+            <div class="emissao-info">
                 <div>Período: 01/11/2023 a 30/11/2023</div>
                 <div>Emissão: 04/12/2023 15:08</div>
             </div>
@@ -142,34 +173,26 @@
             <table class="table">
                 <tr>
                     <th colspan="2">Dados do Colaborador</th>
-                    <th colspan="2">Dados do Empregador</th>
                 </tr>
                 <tr>
                     <td>Nome</td>
                     <td>Larissa Vieira</td>
-                    <td>Razão Social</td>
-                    <td>E. M. Nakamine e Cia LTDA</td>
                 </tr>
                 <tr>
                     <td>CPF</td>
                     <td>13101890288</td>
-                    <td>Endereço</td>
-                    <td>Rua 200, S/N</td>
                 </tr>
                 <tr>
                     <td>Equipe</td>
                     <td>Administrativo</td>
-                    <td>CNPJ</td>
-                    <td>04158944000142</td>
                 </tr>
                 <tr>
                     <td>Cargo</td>
                     <td>Auxiliar Administrativo</td>
-                    <td colspan="2"></td>
                 </tr>
                 <tr>
-                    <td>Turno</td>
-                    <td colspan="3">08:00 - 12:00 | 13:00 - 18:00</td>
+                    <td>Carga Horária</td>
+                    <td colspan="3">8 Horas</td>
                 </tr>
             </table>
 
@@ -180,12 +203,35 @@
                     <th>H.T.</th>
                     <th>H.E.</th>
                     <th>H.F.</th>
-                    <th>Situação</th>
                     <th>H.E. 1</th>
                     <th>H.E. 2</th>
-                    <th>A.N.</th>
-                    <th>Saldo</th>
-                    <th>Motivo</th>
+                    <th>Locais Trab.</th>
+                    <th class="table-obs">OBS</th>
+                </tr>
+                <tr class="row-alt">
+                    <td>01/11/23</td>
+                    <td>08:00 - 12:00 - 13:00 - 18:00</td>
+                    <td>08:01</td>
+                    <td>08:01</td>
+                    <td>00:00</td>
+                    <td>09:00</td>
+                    <td>05:01</td>
+                    <td>Empresa, Casa</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Qui 02/11</td>
+                    <td>08:00 - 12:00 - 13:00 - 18:00</td>
+                    <td>07:59</td>
+                    <td>07:59</td>
+                    <td>00:00</td>
+                    <td>07:59</td>
+                    <td>00:00</td>
+                    <td>Empresa, Casa</td>
+                    <td class="table-obs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vel dolorem
+                        fuga magnam
+                        dignissimos eaque ducimus quibusdam provident, soluta, assumenda hic doloremque eum
+                        exercitationem beatae molestiae itaque illo culpa voluptatum.</td>
                 </tr>
                 <tr class="row-alt">
                     <td>01/11/23</td>
@@ -193,11 +239,9 @@
                     <td>08:01</td>
                     <td>08:01</td>
                     <td>00:00</td>
-                    <td>Concluído</td>
                     <td>09:00</td>
                     <td>05:01</td>
-                    <td>00:00</td>
-                    <td>08:01</td>
+                    <td>Empresa, Casa</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -206,37 +250,9 @@
                     <td>07:59</td>
                     <td>07:59</td>
                     <td>00:00</td>
-                    <td>Concluído</td>
                     <td>00:00</td>
                     <td>07:59</td>
-                    <td>00:00</td>
-                    <td>07:59</td>
-                    <td>Feriado</td>
-                </tr>
-                <tr class="row-alt">
-                    <td>01/11/23</td>
-                    <td>09:05 - 17:08</td>
-                    <td>08:01</td>
-                    <td>08:01</td>
-                    <td>00:00</td>
-                    <td>Concluído</td>
-                    <td>09:00</td>
-                    <td>05:01</td>
-                    <td>00:00</td>
-                    <td>08:01</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>02/11/23</td>
-                    <td>09:08 - 17:08</td>
-                    <td>07:59</td>
-                    <td>07:59</td>
-                    <td>00:00</td>
-                    <td>Concluído</td>
-                    <td>00:00</td>
-                    <td>07:59</td>
-                    <td>00:00</td>
-                    <td>07:59</td>
+                    <td>Empresa, Casa</td>
                     <td>Feriado</td>
                 </tr>
             </table>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Ponto</title>
+
+    <!-- & ESTILIZAÇÃO -->
+    <style>
+        @page {
+            size: A4;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #000;
+            padding: 20px;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            justify-items: center;
+            align-items: center;
+            max-height: 22%;
+            margin-bottom: 2%;
+            padding: 1%;
+            border: 2px dotted #0A1033;
+            border-radius: 5px;
+        }
+
+        .imagem {
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            margin-right: 2%;
+        }
+
+        .logo {
+            max-width: 20%;
+            max-height: 20%;
+            margin: 1%;
+        }
+
+        .header h1 {
+            margin-left: -45%;
+            font-size: 16px;
+        }
+
+        .info {
+            text-align: right;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table th,
+        .table td {
+            border-radius: 2px;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            padding: 4px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #4587eb !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            color: #fff;
+            padding: 0.5%;
+        }
+
+        .table-alt {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table-alt th,
+        .table-alt td {
+            border: 1px solid #ccc;
+            padding: 4px;
+            text-align: left;
+        }
+
+        .table-alt th {
+            background-color: #eb8245 !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            color: #fff;
+            padding: 0.5%;
+        }
+
+
+        .row-alt {
+            background-color: #dddddd !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 8pt;
+            margin-top: 1cm;
+            border-top: 1px solid #ccc;
+            padding-top: 0.2cm;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="imagem">
+                <img src="/src/Logo.png" alt="Logo da empresa" class="logo">
+            </div>
+            <div class="info">
+                <div>Período: 01/11/2023 a 30/11/2023</div>
+                <div>Emissão: 04/12/2023 15:08</div>
+            </div>
+        </div>
+        <p style="text-align: center; font-family: 16px; font-weight: bold;">FOLHA DE PONTO</p>
+
+        <main>
+            <table class="table">
+                <tr>
+                    <th colspan="2">Dados do Colaborador</th>
+                    <th colspan="2">Dados do Empregador</th>
+                </tr>
+                <tr>
+                    <td>Nome</td>
+                    <td>Larissa Vieira</td>
+                    <td>Razão Social</td>
+                    <td>E. M. Nakamine e Cia LTDA</td>
+                </tr>
+                <tr>
+                    <td>CPF</td>
+                    <td>13101890288</td>
+                    <td>Endereço</td>
+                    <td>Rua 200, S/N</td>
+                </tr>
+                <tr>
+                    <td>Equipe</td>
+                    <td>Administrativo</td>
+                    <td>CNPJ</td>
+                    <td>04158944000142</td>
+                </tr>
+                <tr>
+                    <td>Cargo</td>
+                    <td>Auxiliar Administrativo</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>Turno</td>
+                    <td colspan="3">08:00 - 12:00 | 13:00 - 18:00</td>
+                </tr>
+            </table>
+
+            <table class="table-alt">
+                <tr>
+                    <th>Data</th>
+                    <th>Registros</th>
+                    <th>H.T.</th>
+                    <th>H.E.</th>
+                    <th>H.F.</th>
+                    <th>Situação</th>
+                    <th>H.E. 1</th>
+                    <th>H.E. 2</th>
+                    <th>A.N.</th>
+                    <th>Saldo</th>
+                    <th>Motivo</th>
+                </tr>
+                <tr class="row-alt">
+                    <td>01/11/23</td>
+                    <td>09:05 - 17:08</td>
+                    <td>08:01</td>
+                    <td>08:01</td>
+                    <td>00:00</td>
+                    <td>Concluído</td>
+                    <td>09:00</td>
+                    <td>05:01</td>
+                    <td>00:00</td>
+                    <td>08:01</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>02/11/23</td>
+                    <td>09:08 - 17:08</td>
+                    <td>07:59</td>
+                    <td>07:59</td>
+                    <td>00:00</td>
+                    <td>Concluído</td>
+                    <td>00:00</td>
+                    <td>07:59</td>
+                    <td>00:00</td>
+                    <td>07:59</td>
+                    <td>Feriado</td>
+                </tr>
+                <tr class="row-alt">
+                    <td>01/11/23</td>
+                    <td>09:05 - 17:08</td>
+                    <td>08:01</td>
+                    <td>08:01</td>
+                    <td>00:00</td>
+                    <td>Concluído</td>
+                    <td>09:00</td>
+                    <td>05:01</td>
+                    <td>00:00</td>
+                    <td>08:01</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>02/11/23</td>
+                    <td>09:08 - 17:08</td>
+                    <td>07:59</td>
+                    <td>07:59</td>
+                    <td>00:00</td>
+                    <td>Concluído</td>
+                    <td>00:00</td>
+                    <td>07:59</td>
+                    <td>00:00</td>
+                    <td>07:59</td>
+                    <td>Feriado</td>
+                </tr>
+            </table>
+        </main>
+        <footer>
+            <P> FIM DO DOCUMENTO - TOTAL DE PÁGINAS: X </P>
+        </footer>
+    </div>
+</body>
+
+</html>
